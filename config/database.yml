@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: ho757uff
+  password: <%= ENV['YOUR_APPLICATION_DATABASE_PASSWORD'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: Day_3_Eventbrite_with_Stripe_development
+
+test:
+  <<: *default
+  database: Day_3_Eventbrite_with_Stripe_test
+
+production:
+  <<: *default
+  database: Day_3_Eventbrite_with_Stripe_production
+  username: Day_3_Eventbrite_with_Stripe
+  password: <%= ENV['YOUR_APPLICATION_DATABASE_PASSWORD'] %>
