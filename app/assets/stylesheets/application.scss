@@ -29,3 +29,13 @@ button {
 .navbar-custom {
   background-color: $navbar-color; // couleur de fond pour la navbar
 }
+
+// Styles de cartes
+.card {
+  @include box-shadow(0 2px 2px rgba(0,0,0,0.2)); // ombre pour les cartes
+}
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
