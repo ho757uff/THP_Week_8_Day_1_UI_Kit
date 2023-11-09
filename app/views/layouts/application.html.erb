@@ -7,11 +7,12 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_importmap_tags %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
-        <%= link_to "Eventbrute™", root_path, class: "navbar-brand" %>
+        <%= link_to "Eventbrute™", root_path, class: "navbar-brand navbar-brand-pastel" %>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,12 +52,21 @@
     <footer class="footer-custom">
       <div class="container text-center py-3">
         <p>Suivez-nous sur les réseaux sociaux :</p>
-        <!-- Les boutons des réseaux sociaux peuvent également être stylisés via SCSS -->
-        <%= link_to "Facebook", "https://www.facebook.com", class: "btn btn-social btn-facebook", target: "_blank", rel: "noopener noreferrer" %>
-        <%= link_to "Twitter", "https://www.twitter.com", class: "btn btn-social btn-twitter", target: "_blank", rel: "noopener noreferrer" %>
-        <%= link_to "Instagram", "https://www.instagram.com", class: "btn btn-social btn-instagram", target: "_blank", rel: "noopener noreferrer" %>
-        <%= link_to "Discord", "https://www.discord.com", class: "btn btn-social btn-discord", target: "_blank", rel: "noopener noreferrer" %>
-        <%= link_to "GitHub", "https://www.github.com", class: "btn btn-social btn-github", target: "_blank", rel: "noopener noreferrer" %>
+        <%= link_to "https://www.facebook.com", class: "btn btn-dark me-2", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-facebook-f fa-xs"></i> Facebook
+        <% end %>
+        <%= link_to "https://www.twitter.com", class: "btn btn-dark me-2", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-twitter fa-xs"></i> Twitter
+        <% end %>
+        <%= link_to "https://www.instagram.com", class: "btn btn-dark me-2", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-instagram fa-xs"></i> Instagram
+        <% end %>
+        <%= link_to "https://www.discord.com", class: "btn btn-dark me-2", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-discord fa-xs"></i> Discord
+        <% end %>
+        <%= link_to "https://www.github.com", class: "btn btn-dark me-2", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-github fa-xs"></i> GitHub
+        <% end %>
       </div>
     </footer>
     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>

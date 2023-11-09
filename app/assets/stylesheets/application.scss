@@ -4,8 +4,8 @@
 // Définition de la palette de couleurs
 $orange-pastel: #ffab91;
 $rose-pastel: #f8bbd0;
-$violet-pastel: #ce93d8;
-$gris-doux: #cfd8dc;
+$violet-pastel: #d196db;
+$gris-doux: #cbcfd1;
 $primary-color: #fff; // Blanc pour plus de contraste
 $dark-color: #343a40; // Gris foncé pour la navbar et le footer
 $navy-color: #2a3f54; // Bleu marine pour le héros
@@ -25,7 +25,8 @@ body {
   margin-bottom: 60px; // Ajouter un espace en bas pour le footer
 }
 
-button, .btn-dark-custom {
+button,
+.btn-dark-custom {
   @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.15)); // Ombre plus douce pour les boutons
   background-color: $dark-color; // Boutons en gris foncé
   border: none; // Supprimer la bordure par défaut de Bootstrap
@@ -36,14 +37,20 @@ button, .btn-dark-custom {
 }
 
 // Styles spécifiques à la navbar et au footer
-.navbar-custom, .footer-custom {
+.navbar-custom,
+.footer-custom {
   background-color: $dark-color; // Couleur de fond pour la navbar et le footer
-  .nav-link, .footer-link {
+  .nav-link,
+  .footer-link {
     color: $primary-color; // Couleur des liens en blanc
     &:hover {
       color: lighten($primary-color, 10%); // Éclaircir les liens au survol
     }
   }
+}
+
+.navbar-brand-pastel {
+  color: $rose-pastel; // Assurez-vous que cette variable est définie dans votre fichier SCSS
 }
 
 // Styles pour le héros
@@ -61,8 +68,9 @@ button, .btn-dark-custom {
 }
 
 .card-img-top {
-  max-width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
+  width: 100%; /* Assurez-vous que l'image est toujours pleine largeur */
 }
 
 // Styles pour le footer (si vous en avez un)
