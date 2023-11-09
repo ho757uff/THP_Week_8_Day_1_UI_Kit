@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Accueil", root_path %></li>
+        <li><%= link_to "Liste des événements", events_path %></li>
+        <li><%= link_to "Créer un nouvel événement", new_event_path %></li>
+        <!-- Ajoutez d'autres liens de navigation ici si nécessaire -->
+        <% if user_signed_in? %>
+          <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete, data: { turbo_method: :delete, confirm: "Êtes-vous sûr de vouloir vous déconnecter ?" } %></li>
+        <% else %>
+          <li><%= link_to "Connexion", new_user_session_path %></li>
+          <li><%= link_to "Inscription", new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
