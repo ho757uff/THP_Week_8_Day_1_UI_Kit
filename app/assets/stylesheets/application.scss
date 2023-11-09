@@ -1,0 +1,31 @@
+// Path: Full_Stack_Web_Linux/Week_7/Day_3_Eventbrite_with_Stripe/app/assets/stylesheets/application.scss
+
+// Importation de Bootstrap
+@import "bootstrap";
+
+// Variables
+$primary-color: #333;
+$background-color: #f8d7da; // rose pastel
+$navbar-color: #343a40; // couleur foncée pour la navbar
+
+// Mixins
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// Styles globaux
+body {
+  background-color: $background-color; // couleur de fond pour tout le corps de la page
+  color: $primary-color; // couleur principale du texte
+}
+
+button {
+  @include box-shadow(0 2px 2px rgba(0,0,0,0.2)); // ombre pour les boutons
+}
+
+// Styles spécifiques à la navbar
+.navbar-custom {
+  background-color: $navbar-color; // couleur de fond pour la navbar
+}

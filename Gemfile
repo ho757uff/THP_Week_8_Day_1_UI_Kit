@@ -6,6 +6,9 @@ ruby "3.2.2"
 gem "devise"
 gem "stripe"
 
+gem "bootstrap"
+gem "sassc-rails"
+
 gem "pry"
 gem "table_print"
 gem "faker"
@@ -14,10 +17,10 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "letter_opener", group: :development
 gem "sendgrid-ruby"
 
-gem 'rolify'
-gem 'cancancan'
-gem 'simple_form'
-gem 'pundit'
+gem "rolify"
+gem "cancancan"
+gem "simple_form"
+gem "pundit"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
