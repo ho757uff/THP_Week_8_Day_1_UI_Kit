@@ -8,8 +8,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_importmap_tags %>
   </head>
-  <body class="bg-pastel-pink"> <!-- Ajout de la classe pour le fond rose pastel -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- Navbar gris foncé -->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
         <%= link_to "Eventbrute™", root_path, class: "navbar-brand" %>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,26 +48,17 @@
       </div>
     </nav>
     <%= yield %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
-    <footer class="bg-dark text-white mt-4 fixed-bottom">
+    <footer class="footer-custom">
       <div class="container text-center py-3">
         <p>Suivez-nous sur les réseaux sociaux :</p>
-        <a href="https://www.facebook.com" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-facebook-f"></i> Facebook
-        </a>
-        <a href="https://www.twitter.com" class="btn btn-info me-2" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-twitter"></i> Twitter
-        </a>
-        <a href="https://www.instagram.com" class="btn btn-danger me-2" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://www.discord.com" class="btn btn-secondary me-2" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-discord"></i> Discord
-        </a>
-        <a href="https://www.github.com" class="btn btn-dark me-2" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i> GitHub
-        </a>
+        <!-- Les boutons des réseaux sociaux peuvent également être stylisés via SCSS -->
+        <%= link_to "Facebook", "https://www.facebook.com", class: "btn btn-social btn-facebook", target: "_blank", rel: "noopener noreferrer" %>
+        <%= link_to "Twitter", "https://www.twitter.com", class: "btn btn-social btn-twitter", target: "_blank", rel: "noopener noreferrer" %>
+        <%= link_to "Instagram", "https://www.instagram.com", class: "btn btn-social btn-instagram", target: "_blank", rel: "noopener noreferrer" %>
+        <%= link_to "Discord", "https://www.discord.com", class: "btn btn-social btn-discord", target: "_blank", rel: "noopener noreferrer" %>
+        <%= link_to "GitHub", "https://www.github.com", class: "btn btn-social btn-github", target: "_blank", rel: "noopener noreferrer" %>
       </div>
     </footer>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
   </body>
 </html>

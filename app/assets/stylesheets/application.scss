@@ -1,12 +1,14 @@
-// Path: Full_Stack_Web_Linux/Week_7/Day_3_Eventbrite_with_Stripe/app/assets/stylesheets/application.scss
-
 // Importation de Bootstrap
 @import "bootstrap";
 
-// Variables
-$primary-color: #333;
-$background-color: #f8d7da; // rose pastel
-$navbar-color: #343a40; // couleur foncée pour la navbar
+// Définition de la palette de couleurs
+$orange-pastel: #ffab91;
+$rose-pastel: #f8bbd0;
+$violet-pastel: #ce93d8;
+$gris-doux: #cfd8dc;
+$primary-color: #fff; // Blanc pour plus de contraste
+$dark-color: #343a40; // Gris foncé pour la navbar et le footer
+$navy-color: #2a3f54; // Bleu marine pour le héros
 
 // Mixins
 @mixin box-shadow($shadow) {
@@ -17,25 +19,64 @@ $navbar-color: #343a40; // couleur foncée pour la navbar
 
 // Styles globaux
 body {
-  background-color: $background-color; // couleur de fond pour tout le corps de la page
-  color: $primary-color; // couleur principale du texte
+  background-color: $rose-pastel; // Utilisation du rose pastel comme couleur de fond globale
+  color: $dark-color; // Couleur principale du texte
+  font-family: "Open Sans", sans-serif; // Exemple de police globale
+  margin-bottom: 60px; // Ajouter un espace en bas pour le footer
 }
 
-button {
-  @include box-shadow(0 2px 2px rgba(0,0,0,0.2)); // ombre pour les boutons
+button, .btn-dark-custom {
+  @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.15)); // Ombre plus douce pour les boutons
+  background-color: $dark-color; // Boutons en gris foncé
+  border: none; // Supprimer la bordure par défaut de Bootstrap
+  color: $primary-color; // Texte blanc pour les boutons
+  &:hover {
+    background-color: darken($dark-color, 10%); // Assombrir le bouton au survol
+  }
 }
 
-// Styles spécifiques à la navbar
-.navbar-custom {
-  background-color: $navbar-color; // couleur de fond pour la navbar
+// Styles spécifiques à la navbar et au footer
+.navbar-custom, .footer-custom {
+  background-color: $dark-color; // Couleur de fond pour la navbar et le footer
+  .nav-link, .footer-link {
+    color: $primary-color; // Couleur des liens en blanc
+    &:hover {
+      color: lighten($primary-color, 10%); // Éclaircir les liens au survol
+    }
+  }
+}
+
+// Styles pour le héros
+.hero-navy {
+  background-color: $navy-color; // Couleur de fond pour le héros
 }
 
 // Styles de cartes
 .card {
-  @include box-shadow(0 2px 2px rgba(0,0,0,0.2)); // ombre pour les cartes
+  @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.15)); // Ombre plus douce pour les cartes
+  background-color: $violet-pastel; // Fond des cartes en violet pastel
+  .card-header {
+    background-color: $gris-doux; // En-tête des cartes en gris doux
+  }
 }
 
 .card-img-top {
   max-width: 100%;
   height: auto;
+}
+
+// Styles pour le footer (si vous en avez un)
+.footer-custom {
+  background-color: $dark-color; // Couleur de fond pour le footer
+  color: $primary-color; // Couleur du texte pour le footer
+  padding: 20px 0;
+  position: absolute; // Position absolue pour le footer
+  bottom: 0; // Aligner le footer en bas
+  width: 100%; // Largeur complète
+  .footer-link {
+    color: $primary-color; // Couleur des liens du footer
+    &:hover {
+      color: lighten($primary-color, 10%); // Éclaircir les liens du footer au survol
+    }
+  }
 }
