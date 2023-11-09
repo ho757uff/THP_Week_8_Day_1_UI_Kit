@@ -14,7 +14,8 @@
         <li><%= link_to "Accueil", root_path %></li>
         <li><%= link_to "Liste des événements", events_path %></li>
         <li><%= link_to "Créer un nouvel événement", new_event_path %></li>
-        <!-- Ajoutez d'autres liens de navigation ici si nécessaire -->
+        <li><%= link_to 'À propos', about_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete, data: { turbo_method: :delete, confirm: "Êtes-vous sûr de vouloir vous déconnecter ?" } %></li>
         <% else %>
