@@ -1,12 +1,9 @@
 <h1>Liste des Molécules</h1>
 <div class="container">
   <ul>
-    <% @molecules.each do |molecule| %>
-      <li class="vapor-theme">
-        <strong><%= molecule.name %></strong>
-        <p><%= molecule.description %></p>
-        <%= link_to 'Voir plus', molecule_path(molecule), class: 'btn btn-primary' %>
-      </li>
-    <% end %>
+    <li><%= link_to 'Navbar', '/atomic-design/navbar' %></li>
+    <li><%= link_to 'Footer', '/atomic-design/footer' %></li>
+    <li><%= link_to 'Bannière', '/atomic-design/banner' %></li>
+    <li><%= link_to 'Page de Connexion', '/atomic-design/login' %></li>
   </ul>
 </div>

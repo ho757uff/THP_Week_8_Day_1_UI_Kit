@@ -1,14 +1,17 @@
 class StaticPagesController < ApplicationController
-  def home
+  def navbar
+    # logique pour la page navbar
   end
 
-  def about
+  def footer
+    # logique pour la page footer
   end
 
-  def contact
+  def banner
+    # logique pour la page banner
   end
 
-  def molecules
-    @molecules = Molecule.all
+  def login
+    # logique pour la page de connexion
   end
 end
