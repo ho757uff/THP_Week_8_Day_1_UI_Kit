@@ -11,8 +11,18 @@
         <%= render 'atomic-design/navbar/nav-link-contact' %>
         <%= render 'atomic-design/navbar/nav-link-events-index' %>
         <%= render 'atomic-design/navbar/nav-link-events-new' %>
-        <%= render 'atomic-design/navbar/nav-link-molecules-index' %>
-        <!-- Autres liens de la navbar -->
+        <!-- Dropdown "Molécules" -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="moleculesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Molécules
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="moleculesDropdown">
+            <li><%= link_to "Navbar", navbar_molecules_path, class: "dropdown-item" %></li>
+            <li><%= link_to "Footer", footer_molecules_path, class: "dropdown-item" %></li>
+            <!-- Ajoutez d'autres liens pour d'autres types de molécules si nécessaire -->
+          </ul>
+        </li>
+        <!-- Fin du dropdown "Molécules" -->
       </ul>
       <% if user_signed_in? %>
         <span class="navbar-text">

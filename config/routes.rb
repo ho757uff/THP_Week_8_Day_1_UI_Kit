@@ -22,4 +22,12 @@ Rails.application.routes.draw do
 
   # config/routes.rb
   get "/molecules", to: "molecules#index"
+
+  resources :molecules, only: [] do
+    collection do
+      get :navbar
+      get :footer
+      # Ajoutez d'autres routes pour d'autres types de molécules si nécessaire
+    end
+  end
 end
