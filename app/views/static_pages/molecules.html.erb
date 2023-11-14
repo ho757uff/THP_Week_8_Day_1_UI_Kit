@@ -1,0 +1,12 @@
+<h1>Liste des Molécules</h1>
+<div class="container">
+  <ul>
+    <% @molecules.each do |molecule| %>
+      <li class="vapor-theme">
+        <strong><%= molecule.name %></strong>
+        <p><%= molecule.description %></p>
+        <%= link_to 'Voir plus', molecule_path(molecule), class: 'btn btn-primary' %>
+      </li>
+    <% end %>
+  </ul>
+</div>

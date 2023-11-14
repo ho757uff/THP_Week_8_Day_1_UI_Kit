@@ -7,4 +7,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def molecules
+    @molecules = Molecule.all
+  end
 end
