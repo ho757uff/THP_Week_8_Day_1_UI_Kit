@@ -1,0 +1,12 @@
+<h1>Molecules#index</h1>
+<p>Find me in app/views/molecules/index.html.erb</p>
+
+
+<!-- app/views/molecules/index.html.erb -->
+<h1>Liste des Molécules</h1>
+<ul>
+  <% @molecules.each do |molecule| %>
+    <li><%= molecule.name %></li>
+    <!-- Affichez d'autres détails de la molécule selon vos besoins -->
+  <% end %>
+</ul>

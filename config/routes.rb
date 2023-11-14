@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "molecules/index"
   # Devise routes with custom path names
   devise_for :users, path: "", path_names: {sign_in: "login", sign_out: "logout"}
 
@@ -18,4 +19,7 @@ Rails.application.routes.draw do
 
   # Health check route
   get "up" => "rails/health#show", :as => :rails_health_check
+
+  # config/routes.rb
+  resources :molecules, only: [:index]
 end
