@@ -17,11 +17,23 @@ $navy-color: #2a3f54; // Bleu marine pour le héros
   box-shadow: $shadow;
 }
 
+html,
+body {
+  height: 100%; // Assurez-vous que la hauteur de la page est au moins la hauteur de la fenêtre du navigateur
+}
+
 // Styles globaux
 body {
+  display: flex;
+  flex-direction: column; // Organisez le contenu de votre corps en colonne
   background-color: $rose-pastel; // Utilisation du rose pastel comme couleur de fond globale
   color: $dark-color; // Couleur principale du texte
   font-family: "Open Sans", sans-serif; // Exemple de police globale
+  padding-bottom: 60px; // Ajouter un espace en bas équivalent à la hauteur du footer
+}
+
+.content {
+  flex: 1; // Le contenu prendra tout l'espace disponible
   margin-bottom: 60px; // Ajouter un espace en bas pour le footer
 }
 
@@ -73,18 +85,23 @@ button,
   width: 100%; /* Assurez-vous que l'image est toujours pleine largeur */
 }
 
-// Styles pour le footer (si vous en avez un)
+// Styles pour le footer
 .footer-custom {
   background-color: $dark-color; // Couleur de fond pour le footer
   color: $primary-color; // Couleur du texte pour le footer
   padding: 20px 0;
-  position: absolute; // Position absolue pour le footer
+  position: fixed; // Position collante pour le footer
   bottom: 0; // Aligner le footer en bas
   width: 100%; // Largeur complète
+  height: 120px; // Définir une hauteur fixe pour le footer
+  flex-shrink: 0; // Empêche le footer de se rétrécir si le contenu est trop grand
+  z-index: 10; // Assurez-vous que le footer est au-dessus des autres éléments
+}
+
   .footer-link {
     color: $primary-color; // Couleur des liens du footer
     &:hover {
       color: lighten($primary-color, 10%); // Éclaircir les liens du footer au survol
     }
   }
-}
+

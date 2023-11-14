@@ -1,9 +1,19 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# db/seeds.rb
+
+# Créer un utilisateur (remplacez par vos propres attributs)
+user = User.create!(
+  email: "organisateur_1@example.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+# Créer quelques événements
+5.times do |i|
+  Event.create!(
+    name: "Événement ##{i}",
+    description: "Ceci est la description de l'événement numéro #{i}.",
+    date: DateTime.now + i.days, # Chaque événement est espacé d'un jour.
+    organizer: user # Assurez-vous que l'organisateur est un utilisateur valide.
+    # Ajoutez d'autres attributs nécessaires ici.
+  )
+end
