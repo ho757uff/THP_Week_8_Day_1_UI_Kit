@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", :as => :rails_health_check
 
   # config/routes.rb
-  resources :molecules, only: [:index]
+  get "/molecules", to: "molecules#index"
 end
