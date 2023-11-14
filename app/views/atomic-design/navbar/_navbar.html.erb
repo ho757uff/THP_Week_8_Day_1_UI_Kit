@@ -6,21 +6,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to 'Accueil', root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'À propos', about_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Contact', contact_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Liste des événements", events_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Créer un nouvel événement", new_event_path, class: "nav-link" %>
-        </li>
+        <%= render 'navbar/nav-link-home' %>
+        <%= render 'navbar/nav-link-about' %>
+        <%= render 'navbar/nav-link-contact' %>
+        <%= render 'navbar/nav-link-events-index' %>
+        <%= render 'navbar/nav-link-events-new' %>
         <!-- Autres liens de la navbar -->
       </ul>
       <% if user_signed_in? %>
