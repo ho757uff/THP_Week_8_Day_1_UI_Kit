@@ -1,0 +1,6 @@
+Placez tous les fichiers HTML correspondant à vos molécules et organismes dans le dossier "app/views/atomic-design". Vous pouvez créer des sous-dossiers pour organiser les fichiers en fonction de leur type (molécules, organismes, etc.).
+Assurez-vous que les chemins d'accès dans vos fichiers de vues Rails pointent correctement vers les fichiers HTML de votre conception atomique, en utilisant le chemin relatif à partir du dossier "app/views/atomic-design".
+
+Une fois cela fait, vous pourrez inclure les fichiers HTML de votre conception atomique dans les vues de votre application Rails en utilisant les balises 
+<%= render 'atomic-design/path/to/your/molecule' %>, où "path/to/your/molecule" est le chemin relatif depuis le dossier "app/views/atomic-design" jusqu'au fichier HTML de la molécule que vous souhaitez inclure.
+Cette approche vous permettra d'organiser proprement vos fichiers de conception atomique dans un projet Rails et de les utiliser facilement dans vos vues.

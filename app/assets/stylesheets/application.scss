@@ -1,6 +1,9 @@
 // Importation de Bootstrap
 @import "bootstrap";
 
+// Importation du thème Bootswatch
+@import "vapor";
+
 // Définition de la palette de couleurs
 $orange-pastel: #ffab91;
 $rose-pastel: #f8bbd0;
@@ -98,10 +101,9 @@ button,
   z-index: 10; // Assurez-vous que le footer est au-dessus des autres éléments
 }
 
-  .footer-link {
-    color: $primary-color; // Couleur des liens du footer
-    &:hover {
-      color: lighten($primary-color, 10%); // Éclaircir les liens du footer au survol
-    }
+.footer-link {
+  color: $primary-color; // Couleur des liens du footer
+  &:hover {
+    color: lighten($primary-color, 10%); // Éclaircir les liens du footer au survol
   }
-
+}
