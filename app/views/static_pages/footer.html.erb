@@ -1,5 +1,22 @@
-<div class="vapor-theme">
-  <footer class="footer">
-    <!-- Ici, ajoutez le contenu de votre footer -->
-  </footer>
-</div>
+
+    <footer class="footer-custom">
+      <div class="container text-center py-3">
+        <p>Suivez-nous sur les réseaux sociaux :</p>
+        <%= link_to "https://www.facebook.com", class: "btn btn-primary btn-lg me-5", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-facebook-f fa-xs"></i> Facebook
+        <% end %>
+        <%= link_to "https://www.twitter.com", class: "btn btn-success btn-lg me-4", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-twitter fa-xs"></i> Twitter
+        <% end %>
+        <%= link_to "https://www.instagram.com", class: "btn btn-info me-3", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-instagram fa-xs"></i> Instagram
+        <% end %>
+        <%= link_to "https://www.discord.com", class: "btn btn-warning btn-sm me-2", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-discord fa-xs"></i> Discord
+        <% end %>
+        <%= link_to "https://www.github.com", class: "btn btn-danger btn-sm me-1", target: "_blank", rel: "noopener noreferrer" do %>
+          <i class="fab fa-github fa-xs"></i> GitHub
+        <% end %>
+      </div>
+    </footer>
+

@@ -1,9 +1,21 @@
-<h1>Liste des Molécules</h1>
 <div class="container">
-  <ul>
-    <li><%= link_to 'Navbar', '/atomic-design/navbar' %></li>
-    <li><%= link_to 'Footer', '/atomic-design/footer' %></li>
-    <li><%= link_to 'Bannière', '/atomic-design/banner' %></li>
-    <li><%= link_to 'Page de Connexion', '/atomic-design/login' %></li>
+  <h1>Liste des Molécules</h1>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <%= link_to 'Navbar', '/atomic-design/navbar', class: 'btn btn-primary' %>
+      <p class="text-muted">La navbar de notre site.</p>
+    </li>
+    <li class="list-group-item">
+      <%= link_to 'Footer', '/atomic-design/footer', class: 'btn btn-primary' %>
+      <p class="text-muted">Le footer de notre site.</p>
+    </li>
+    <li class="list-group-item">
+      <%= link_to 'Bannière', '/atomic-design/banner', class: 'btn btn-primary' %>
+      <p class="text-muted">La bannière de notre site.</p>
+    </li>
+    <li class="list-group-item">
+      <%= link_to 'Page de Connexion', '/atomic-design/login', class: 'btn btn-primary' %>
+      <p class="text-muted">La page de connexion.</p>
+    </li>
   </ul>
 </div>
